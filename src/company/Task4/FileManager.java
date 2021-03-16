@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 public class FileManager {
-    public static final String FILE = "C:\\Users\\Microsoft\\IdeaProjects\\Testaplication\\resources\\cars.txt";
+    public static final String FILE = "C:\\Users\\spook\\IdeaProjects\\Testaplication\\resources\\cars.txt";
     public static final String car_FILE_OUTPUT_TEMPLATE = "%s/%d/%s%n";
     public static void savecars(List<Car> cars)  {
         try (FileWriter writer = new FileWriter(FILE)){
