@@ -29,7 +29,10 @@ public class FileManager {
             while (reader.ready()) {
                 String line = reader.readLine();
                 String[] parts = line.split("/");
-                Car car = new Car(parts[0], parts[2], Integer.parseInt(parts[1]));
+                String name = parts[0];
+                String color = parts[2];
+                int cost = Integer.parseInt(parts[1]);
+                Car car = new Car(name, color, cost);
                 cars.add(car);
             }
         } catch (FileNotFoundException e) {

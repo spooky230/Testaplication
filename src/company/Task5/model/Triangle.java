@@ -1,6 +1,6 @@
 package company.Task5.model;
 
-import company.Task5.exeption.InvalidSizeException;
+import company.Task5.exception.InvalidSizeException;
 
 import java.util.List;
 

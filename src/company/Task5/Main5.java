@@ -1,22 +1,25 @@
 package company.Task5;
 
-import company.Task5.exeption.InvalidSizeException;
-import company.Task5.model.Triangle;
+import company.Task5.exception.CalculationNotImplementedException;
+import company.Task5.exception.InvalidSizeException;
+import company.Task5.model.*;
+import company.Task5.service.FileService;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.List;
 
 public class Main5 {
     public static void main(String[] args) {
-        Triangle triangle = null;
-        try {
-            triangle = new Triangle(Arrays.asList(5.0,20.0,6.0));
-            double perimeter = triangle.calculatePerimeter();
-            System.out.println(perimeter);
-            double area = triangle.calculateArea();
-            System.out.println(area);
-        } catch (InvalidSizeException e) {
-            e.printStackTrace();
+        List<Figure> figures = FileService.getAllFigures();
+        for (int i = 0; i < figures.size(); i++) {
+            System.out.println(i + "   " + figures.get(i).getClass().getName());            try {
+                System.out.println(figures.get(i).calculateArea());
+            } catch (CalculationNotImplementedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(figures.get(i).calculatePerimeter());
         }
     }
+
 }
