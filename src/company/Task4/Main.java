@@ -5,6 +5,7 @@ import company.Task4.CarFillters;
 import company.Task4.FileManager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -29,30 +30,33 @@ public class Main {
 //        fillter.fillterCarsByColor(carList);
         carList = FileManager.getAllcars();
         FileManager.savecars(carList);
+        String x = "zz@z\nzz@z";
+        System.out.println(Arrays.toString(x.getBytes()));
+        System.out.println(x);
         boolean until = true;
-        while(until){
-            Scanner scanner = new Scanner(System.in);
-            System.out.printf(" 1 to view all information \n 2 for price filter \n 3 for color filter \n 4 to exit \n input:  ");
-            int menu = scanner.nextInt();
-//            if (menu == 1){
-//                fillter.ShowAll(carList);
+//        while(until){
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.printf(" 1 to view all information \n 2 for price filter \n 3 for color filter \n 4 to exit \n input:  ");
+//            int menu = scanner.nextInt();
+////            if (menu == 1){
+////                fillter.ShowAll(carList);
+////            }
+////            else if (menu == 2){
+////                fillter.fillterCarsPrice(carList);
+////            }
+////            else if (menu == 3){
+////                fillter.fillterCarsByColor(carList);
+////            }
+////            else if (menu == 4){
+////                until=false;
+////            }
+//            switch (menu){
+//                case 1 : fillter.ShowAll(carList);break;
+//                case 2 : fillter.fillterCarsPrice(carList);break;
+//                case 3 : fillter.fillterCarsByColor(carList);break;
+//                case 4 : until=false;break;
+//                default: System.out.println("Please input one of the options above ");
 //            }
-//            else if (menu == 2){
-//                fillter.fillterCarsPrice(carList);
-//            }
-//            else if (menu == 3){
-//                fillter.fillterCarsByColor(carList);
-//            }
-//            else if (menu == 4){
-//                until=false;
-//            }
-            switch (menu){
-                case 1 : fillter.ShowAll(carList);break;
-                case 2 : fillter.fillterCarsPrice(carList);break;
-                case 3 : fillter.fillterCarsByColor(carList);break;
-                case 4 : until=false;break;
-                default: System.out.println("Please input one of the options above ");
-            }
-        }
+//        }
     }
 }

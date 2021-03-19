@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 public class FileManager {
-    public static final String FILE = "C:\\Users\\spook\\IdeaProjects\\Testaplication\\resources\\cars.txt";
+    public static final String FILE = "E:\\IdeaProjects\\Testaplication\\resources\\cars.txt";
     public static final String car_FILE_OUTPUT_TEMPLATE = "%s/%d/%s%n";
     public static void savecars(List<Car> cars)  {
         try (FileWriter writer = new FileWriter(FILE)){
@@ -29,8 +29,15 @@ public class FileManager {
             while (reader.ready()) {
                 String line = reader.readLine();
                 String[] parts = line.split("/");
-                Car car = new Car(parts[0], parts[2], Integer.parseInt(parts[1]));
+                String name = parts[0];
+                String color = parts[2];
+                int cost = Integer.parseInt(parts[1]);
+                Car car = new Car(name, color, cost);
                 cars.add(car);
+            }
+            int rowsCountInFile = 50;
+            for (int lineNumber = 0; lineNumber < rowsCountInFile; lineNumber++) {
+
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
