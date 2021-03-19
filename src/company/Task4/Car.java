@@ -38,4 +38,12 @@ public class Car {
     private String Color;
     private int Cost;
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "Name='" + Name + '\'' +
+                ", Color='" + Color + '\'' +
+                ", Cost=" + Cost +
+                '}';
+    }
 }
