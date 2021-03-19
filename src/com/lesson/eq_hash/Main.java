@@ -15,9 +15,9 @@ public class Main {
 
         ClientFullEquals fullEquals = new ClientFullEquals("Jacob","USA");
         ClientFullEquals cloneB = fullEquals.clone();
+        System.out.println(fullEquals.equals(cloneB));
         fullEquals.getPurchases().add("potato");
         fullEquals.getPurchases().add("tomato");
-        System.out.println(fullEquals.getPurchases().equals(cloneB.getPurchases()));
         System.out.println(fullEquals.equals(cloneB));
         cloneB.setName("John");
         System.out.println(fullEquals.equals(cloneB));

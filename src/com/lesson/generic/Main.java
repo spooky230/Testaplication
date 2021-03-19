@@ -13,5 +13,7 @@ public class Main {
         Utils.printItems(new Account[]{acc1, acc2});
         Utils.printItems(new Double[]{27.64, 166.,544.2});
         Utils.printItems(new String[]{"line0", "Mars","tomato","cat"});
+        Hint<String,Integer> purchase = new Hint<>("tomato",50);
+        Hint<String,Double>
     }
 }
