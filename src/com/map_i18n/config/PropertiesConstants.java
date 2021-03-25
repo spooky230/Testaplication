@@ -11,6 +11,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class PropertiesConstants {
@@ -26,7 +27,7 @@ public class PropertiesConstants {
     private static final String LANG_PROPERTIES = "lang/%s.properties";
     private static PropertiesConstants instance = null;
     private final Properties properties;
-    private final HashMap<String, String> propertiesMap;
+    private final Map<String, String> propertiesMap;
     private final ConstantsMode mode;
 
     public static PropertiesConstants getInstance() {
