@@ -1,0 +1,16 @@
+package com.lesson.enums.model;
+
+public enum RolePermissions {
+    BAN_USERS,
+    UNBAN_USERS,
+    CREATE_USERS,
+    DELETE_USERS,
+    CREATE_ARTICLES,
+    UPDATE_ARTICLES,
+    LEAVE_COMMENTS,
+    DELETE_OWN_COMMENTS,
+    DELETE_ANY_COMMENTS,
+    DELETE_ARTICLES,
+    MODIFY_USER_ROLES,
+    WRITE_TO_SUPPORT
+}
