@@ -39,13 +39,13 @@ public class EnumMain {
             moderators.add(user);
         }
         if (user1.getRoles().contains(UserRole.MODERATOR)) {
-            moderators.add(user);
+            moderators.add(user1);
         }
         if (user2.getRoles().contains(UserRole.MODERATOR)) {
-            moderators.add(user);
+            moderators.add(user2);
         }
         for (User usr : moderators) {
-            System.out.println(usr.getUsername() + "is a moderator");
+            System.out.println(usr.getUsername() + " is a moderator");
         }
     }
 }
