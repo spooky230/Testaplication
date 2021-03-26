@@ -5,11 +5,10 @@ import java.util.List;
 
 public class ComponentNode implements Cloneable{
     public List<ComponentNode> componentNodes = new LinkedList<>();
-    public ComponentNode parent;
     public String pre = "";
     public String after = "";
+
     public ComponentNode addNode(ComponentNode node) {
-        node.parent = this;
         componentNodes.add(node);
         return this;
     }

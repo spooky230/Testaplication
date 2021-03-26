@@ -5,8 +5,8 @@ import java.io.IOException;
 
 public class TreeMain {
     public static void main(String[] args) {
-        ComponentNode html = createTree();
-        String htmlDocument = html.render();
+        ComponentNode root = createTree1();
+        String htmlDocument = root.render();
         System.out.println(htmlDocument);
         try (FileWriter writer = new FileWriter("example.html")) {
             writer.append(htmlDocument);
@@ -15,6 +15,9 @@ public class TreeMain {
             e.printStackTrace();
         }
     }
+
+    public String bbbbbbbbb = null;
+    public String a = bbbbbbbbb;
 
     public static ComponentNode createTree() {
         ComponentNode html = new ComponentNode();
@@ -64,6 +67,36 @@ public class TreeMain {
         p
                 .addNode(pText)
                 .addNode(ul);
+        return html;
+    }
+
+    public static ComponentNode createTree1() {
+        ComponentNode html = new ComponentNode();
+        html.pre = "<html>\n";
+        html.after = "</html>";
+        ComponentNode body = new ComponentNode();
+        body.pre = "\t<body>\n"; // \t is 4 spaces \n is new line
+        body.after = "\t</body>\n";
+        ComponentNode h1 = new ComponentNode();
+        h1.pre = "\t\t<h1>";
+        h1.after = "</h1>\n";
+        ComponentNode h1text = new ComponentNode();
+        h1text.pre = "Hello World";
+        h1text.after = "!";
+        ComponentNode p = new ComponentNode();
+        p.pre = "\t\t<p>";
+        p.after = "\t\t</p>\n";
+        ComponentNode pText = new ComponentNode();
+        pText.pre = "This is hello world html app";
+        pText.after = "\n";
+
+        html
+                .addNode(body)
+                .addNode(h1);
+        body.addNode(p);
+        h1.addNode(h1text);
+        p
+                .addNode(pText);
         return html;
     }
 }
