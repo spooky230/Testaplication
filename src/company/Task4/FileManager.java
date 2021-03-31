@@ -35,10 +35,10 @@ public class FileManager {
                 Car car = new Car(name, color, cost);
                 cars.add(car);
             }
-            int rowsCountInFile = 50;
-            for (int lineNumber = 0; lineNumber < rowsCountInFile; lineNumber++) {
-
-            }
+//            int rowsCountInFile = 50;
+//            for (int lineNumber = 0; lineNumber < rowsCountInFile; lineNumber++) {
+//
+//            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {

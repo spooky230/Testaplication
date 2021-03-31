@@ -91,12 +91,10 @@ public class TreeMain {
         pText.after = "\n";
 
         html
-                .addNode(body)
-                .addNode(h1);
+                .addNode(h1).addNode(body);
         body.addNode(p);
         h1.addNode(h1text);
-        p
-                .addNode(pText);
+        p.addNode(pText);
         return html;
     }
 }

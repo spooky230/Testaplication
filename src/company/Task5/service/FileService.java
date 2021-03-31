@@ -1,16 +1,33 @@
 package company.Task5.service;
 
+import company.Task4.Car;
 import company.Task5.exception.InvalidSizeException;
 import company.Task5.model.*;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class FileService {
+    public void saveAllFigures(List<Figure> figures){
+        try(FileWriter writer = new FileWriter(FILE)){
+            for (int i = 0; i<figures.size();i++) {
+                String figureToString = figureToString(figures.get(i));
+                writer.append(figureToString + "\n");
+                writer.flush();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        }
+    public String figureToString(Figure figure) {
+        String result = "";
+        for (int i = 0; i <figure.getEdgesCount() ; i++) {
+            result = result + figure.getEdges().get(i) + " ";
+        }
+        result = result.trim();
+        return result;
+    }
     public static final String FILE
             = "Figures.txt";
 //    triangle = new Triangle(Arrays.asList(5.0,7.0,6.0));

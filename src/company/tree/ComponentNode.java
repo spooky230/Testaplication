@@ -20,7 +20,6 @@ public class ComponentNode implements Cloneable{
         code.append(after);
         return code.toString();
     }
-
     @Override
     public ComponentNode clone() {
         ComponentNode clone = new ComponentNode();
