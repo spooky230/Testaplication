@@ -9,7 +9,9 @@ import java.util.List;
 public abstract class Figure {
     protected int edgesCount;
     protected List<Double> edges = new LinkedList<>();
+
     public abstract double calculateArea() throws CalculationNotImplementedException;
+
     public double calculatePerimeter(){
         double edgesPlused = 0;
         for (int i = 0; i < edgesCount; i++) {

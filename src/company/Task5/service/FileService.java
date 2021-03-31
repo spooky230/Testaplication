@@ -12,15 +12,16 @@ import java.util.List;
 
 public class FileService {
     public static final String FILE
-            = "C:\\Users\\spook\\IdeaProjects\\Testaplication\\resources\\Figures.txt";
+            = "Figures.txt";
 //    triangle = new Triangle(Arrays.asList(5.0,7.0,6.0));
 //    double perimeter = triangle.calculatePerimeter();
 //            System.out.println(perimeter);
 //    double area = triangle.calculateArea();
 //            System.out.println(area + "\n");
-    public static List<Figure> getAllFigures() {
+    public List<Figure> getAllFigures() {
         List<Figure> figures = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(FILE))) {
+        String file = getClass().getClassLoader().getResource(FILE).getFile();
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             while (reader.ready()) {
                 String figureLine = reader.readLine();
                 String[] parts = figureLine.split(" ");
@@ -60,6 +61,9 @@ public class FileService {
             e.printStackTrace();
         } catch (InvalidSizeException e) {
             e.printStackTrace();
+        }
+        finally {
+            System.out.println("do anyway");
         }
         return figures;
     }
