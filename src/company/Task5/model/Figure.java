@@ -35,4 +35,12 @@ public abstract class Figure {
         this.edgesCount=edges.size();
         Check();
     }
+
+    public int getEdgesCount() {
+        return edgesCount;
+    }
+
+    public List<Double> getEdges() {
+        return edges;
+    }
 }
