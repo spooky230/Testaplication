@@ -1,16 +1,25 @@
 package company.tree;
 
 import company.tree.html.H1;
+import company.tree.html.HtmlElement;
+import company.tree.html.HtmlRoot;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
 
 public class TreeMain {
     public static void main(String[] args) {
-        H1 h = new H1();
-        H1 hh = new H1("tttttt");
-        H1 hhh = new H1("tttttt","background: rgb(110,10,10)");
+//        H1 h = new H1();
+//        H1 hh = new H1("tttttt");
+//        H1 hhh = new H1("tttttt","background: rgb(110,10,10)");
         System.out.println();
+        HtmlElement body = new HtmlElement();
+        body.tagName = "body";
+        HtmlElement head = new HtmlElement();
+        head.tagName = "head";
+        HtmlElement root = new HtmlRoot(head,body);
+        String code = root.render();
 //        ComponentNode root = createTree1();
 //        String htmlDocument = root.render();
 //        System.out.println(htmlDocument);
