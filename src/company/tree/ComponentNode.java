@@ -7,7 +7,6 @@ public class ComponentNode implements Cloneable{
     public List<ComponentNode> componentNodes = new LinkedList<>();
     public String pre = "";
     public String after = "";
-
     public ComponentNode addNode(ComponentNode node) {
         componentNodes.add(node);
         return this;

@@ -1,19 +1,25 @@
 package company.tree;
 
+import company.tree.html.H1;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class TreeMain {
     public static void main(String[] args) {
-        ComponentNode root = createTree1();
-        String htmlDocument = root.render();
-        System.out.println(htmlDocument);
-        try (FileWriter writer = new FileWriter("example.html")) {
-            writer.append(htmlDocument);
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        H1 h = new H1();
+        H1 hh = new H1("tttttt");
+        H1 hhh = new H1("tttttt","background: rgb(110,10,10)");
+        System.out.println();
+//        ComponentNode root = createTree1();
+//        String htmlDocument = root.render();
+//        System.out.println(htmlDocument);
+//        try (FileWriter writer = new FileWriter("example.html")) {
+//            writer.append(htmlDocument);
+//            writer.flush();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     public String bbbbbbbbb = null;
