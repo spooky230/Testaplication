@@ -11,12 +11,18 @@ public class HtmlRoot extends HtmlElement {
     }
     private HtmlElement head;
     private HtmlElement body;
-    private HtmlRoot(HtmlElement head,HtmlElement body){
+    public HtmlRoot(HtmlElement head,HtmlElement body){
+        this();
         this.head = head;
         this.body = body;
     }
     @Override
     public String render(){
-        return renderOpenedTag()+head.render()+body.render()+renderClosedTag();
+        String open = renderOpenedTag();
+        String headRenderResult = head.render();
+        String bodyRenderResult = body.render();
+        String close = renderClosedTag();
+        String result = open + headRenderResult + bodyRenderResult + close;
+        return result;
     }
 }
