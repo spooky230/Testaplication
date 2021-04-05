@@ -39,9 +39,11 @@ public class HtmlElement implements Cloneable {
         return code;
     }
     protected String renderOpenedTag(){
-        return String.format(open,tagName);
+        String format = String.format(open, tagName);
+        return format;
     }
     protected String renderClosedTag(){
-        return String.format(close,tagName);
+        String format = String.format(close, tagName);
+        return format;
     }
 }

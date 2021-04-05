@@ -1,12 +1,15 @@
 package company.tree;
 
 import company.tree.html.H1;
+import company.tree.html.Head;
 import company.tree.html.HtmlElement;
 import company.tree.html.HtmlRoot;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class TreeMain {
     public static void main(String[] args) {
@@ -16,8 +19,13 @@ public class TreeMain {
         System.out.println();
         HtmlElement body = new HtmlElement();
         body.tagName = "body";
-        HtmlElement head = new HtmlElement();
-        head.tagName = "head";
+        List<String> Style = new ArrayList<>();
+        Style.add("Style1.css");
+        Style.add("googleStyle.css");
+        List<String> Scripts = new ArrayList<>();
+        Scripts.add("registrationScript.js");
+        Scripts.add("OrderForm.js");
+        HtmlElement head = new Head("googleMarket",Style,Scripts);
         HtmlElement root = new HtmlRoot(head,body);
         String code = root.render();
 //        ComponentNode root = createTree1();
