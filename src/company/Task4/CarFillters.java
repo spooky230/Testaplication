@@ -9,10 +9,11 @@ public class CarFillters {
         System.out.println("Input your budget: ");
         int carBudget = scanner.nextInt();
         for (int i = 0; i < cars.size(); i++) {
-            if (cars.get(i).getCost() <= carBudget) {
-                System.out.println(cars.get(i).getColor());
-                System.out.println(cars.get(i).getCost());
-                System.out.println(cars.get(i).getName());
+            Car car = cars.get(i);
+            if (car.getCost() <= carBudget) {
+                System.out.println(car.getColor());
+                System.out.println(car.getCost());
+                System.out.println(car.getName());
             }
 
         }

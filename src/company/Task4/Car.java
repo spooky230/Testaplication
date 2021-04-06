@@ -1,49 +1,49 @@
 package company.Task4;
 
 public class Car {
-    public String getName() {
-        return Name;
-    }
+    private String name;
+    private String color;
+    private int cost;
 
     public Car() {
     }
 
-    public void setName(String name) {
-        Name = name;
+    public Car(String name, String color, int cost) {
+        this.name = name;
+        this.color = color;
+        this.cost = cost;
     }
 
-    public Car(String name, String color, int cost) {
-        Name = name;
-        Color = color;
-        Cost = cost;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.color = color;
     }
 
     public int getCost() {
-        return Cost;
+        return cost;
     }
 
     public void setCost(int cost) {
-        Cost = cost;
+        this.cost = cost;
     }
-
-    private String Name;
-    private String Color;
-    private int Cost;
 
     @Override
     public String toString() {
         return "Car{" +
-                "Name='" + Name + '\'' +
-                ", Color='" + Color + '\'' +
-                ", Cost=" + Cost +
+                "Name='" + name + '\'' +
+                ", Color='" + color + '\'' +
+                ", Cost=" + cost +
                 '}';
     }
 }
