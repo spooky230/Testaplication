@@ -42,7 +42,7 @@ public class SeasonResults implements Comparable<SeasonResults> {
     }
 
     @Override
-    public int compareTo(SeasonResults o) {
-        return 0;
+    public int compareTo(SeasonResults SecondResult) {
+        return Integer.compare(scoreCounter(),SecondResult.scoreCounter());
     }
 }
