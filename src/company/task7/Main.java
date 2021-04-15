@@ -26,5 +26,6 @@ public class Main {
         market.setName("          Malwart");
         market.setRow(6);
         service.printCheck(market,cashier1,check,6);
+        service.writeCheck(market,cashier1,check,6);
     }
 }

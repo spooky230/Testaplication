@@ -58,12 +58,5 @@ public class Main {
 //                default: System.out.println("Please input one of the options above ");
 //            }
 //        }
-        Product Phone = new Product();
-        Phone.setName("vPhone12");
-        Phone.setCompany("vPhone");
-        Phone.setCost(300);
-        Phone.setCount(5000);
-        Product product1 = new Product("Name","Company",200,1000);
-        Cashier empolye1 = new Cashier("Bob",3);
     }
 }

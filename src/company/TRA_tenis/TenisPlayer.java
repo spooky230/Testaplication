@@ -3,6 +3,7 @@ package company.TRA_tenis;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 public class TenisPlayer {
     private String firstName;
@@ -38,6 +39,19 @@ public class TenisPlayer {
         return firstName;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TenisPlayer that = (TenisPlayer) o;
+        return Objects.equals(firstName, that.firstName) && Objects.equals(lastName, that.lastName) && Objects.equals(birthDate, that.birthDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName, lastName, birthDate);
+    }
+
     public Date getBirthDate() {
         return birthDate;
     }
@@ -64,5 +78,8 @@ public class TenisPlayer {
     public String getDateAsString(){
         String result = simpleDateFormat.format(birthDate);
         return result;
+    }
+    public String getFullName(){
+        return lastName+" "+firstName;
     }
 }

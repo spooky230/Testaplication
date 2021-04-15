@@ -1,0 +1,9 @@
+          Malwart
+Cashier: Josh Smith
+Row: 6
+2021/04/15  10:06
+Products: 
+Hat:       2 x 25.0 = 50.0
+Chips:       5 x 4.5 = 22.5
+______________________________________
+Total: 72.5
