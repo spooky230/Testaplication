@@ -39,11 +39,11 @@ public class Main {
             default:
                 System.out.println("Incorrect choice");
         }
-        Set<Profile> sortedProfiles = new TreeSet<>(profileComparator);
-        sortedProfiles.addAll(Sprofile);
+        List<Profile> sortedProfiles = new LinkedList<>(Sprofile);
+        sortedProfiles.sort(profileComparator);
         printProfiles(sortedProfiles);
+        ProfileService.profileWriter(sortedProfiles);
     }
-
     private static Set<Profile> createProfiles() {
         TenisPlayer player1 = new TenisPlayer("Tony","Chimpo","Uk","4/8/1983");
         TenisPlayer player2 = new TenisPlayer("George","Shaltor","Spain","1/16/1973");
@@ -78,7 +78,7 @@ public class Main {
         Sprofile.add(profile6);
         return Sprofile;
     }
-    private static void printProfiles(Set<Profile> Sprofile) {
+    private static void printProfiles(Collection<Profile> Sprofile) {
         System.out.println("Last name           first name           Country           DOB     Wins   Loses  Goals  Score");
         for (Profile profile : Sprofile){
             System.out.printf("|%-19s|%-14s|%-17s|%-10s|%6d|%6d|%6d|%6d|%n",
