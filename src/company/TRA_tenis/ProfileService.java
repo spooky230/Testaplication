@@ -2,9 +2,10 @@ package company.TRA_tenis;
 
 import company.Task4.Car;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 public class ProfileService {
     public static final String FILE = "C:\\Users\\Microsoft\\IdeaProjects\\Testaplication\\resources\\Player.txt";
@@ -28,5 +29,32 @@ public class ProfileService {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public static List<Profile> getAllProfiles(){
+        List<Profile> profiles = new LinkedList<>();
+
+        try(BufferedReader reader = new BufferedReader(new FileReader(FILE))){
+            while(reader.ready()) {
+                String line = reader.readLine();
+                String[] parts = line.split("\\|");
+                String lastName = parts[0];
+                String firstName = parts[1];
+                String country = parts[2];
+                String dateOfBirth = parts[3];
+                int wins = Integer.parseInt(parts[4]);
+                int loses = Integer.parseInt(parts[5]);
+                int score = Integer.parseInt(parts[6]);
+                TenisPlayer player = new TenisPlayer(firstName,lastName, country, dateOfBirth);
+                SeasonResults seasonRes = new SeasonResults(wins, loses, score);
+                Profile profile = new Profile(player, seasonRes);
+                profiles.add(profile);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return profiles;
     }
 }

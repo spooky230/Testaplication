@@ -4,7 +4,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        Set<Profile> Sprofile = createProfiles();
+        List<Profile> Sprofile = ProfileService.getAllProfiles();
         System.out.println("1)full name  2)country 3)DOB 4)wins 5)loses 6)goals 7)score 8)games count\norder by: ");
         Scanner scanner = new Scanner(System.in);
         int byChoice = scanner.nextInt();
@@ -44,7 +44,7 @@ public class Main {
         printProfiles(sortedProfiles);
         ProfileService.profileWriter(sortedProfiles);
     }
-    private static Set<Profile> createProfiles() {
+    private static Set<Profile> createProfiles()  {
         TenisPlayer player1 = new TenisPlayer("Tony","Chimpo","Uk","4/8/1983");
         TenisPlayer player2 = new TenisPlayer("George","Shaltor","Spain","1/16/1973");
         TenisPlayer player3 = new TenisPlayer("Sara","Verko","Spain","9/1/1995");
