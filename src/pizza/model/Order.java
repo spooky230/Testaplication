@@ -1,4 +1,4 @@
-package pizza;
+package pizza.model;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,6 +8,11 @@ public class Order {
     private Date orderedTime;
     private Date deliveredTime;
     public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+    public Order(Client client){
+        this.client = client;
+        this.orderedTime = new Date();
+    }
+
     public Client getClient() {
         return client;
     }
@@ -22,10 +27,6 @@ public class Order {
 
     public Pizza getPizza() {
         return pizza;
-    }
-
-    public void setClient(Client client) {
-        this.client = client;
     }
 
     public void setDeliveredTime(Date deliveredTime) {

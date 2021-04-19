@@ -1,4 +1,4 @@
-package pizza;
+package pizza.model;
 public enum Amount {
     NONE(0),
     LESS(0.5),

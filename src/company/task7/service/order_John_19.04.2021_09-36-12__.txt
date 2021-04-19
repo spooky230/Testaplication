@@ -1,0 +1,37 @@
+____________________________________________________
+|                      PIZZA ORDER                 |
+|                                                  |
+| Order date    :  19.04.2021 09:36:12             |
+| Delivery date :  19.06.2025 11:38:14             |
+|                                                  |
+| Client  :    John                                |
+| Phone   :    1232189338                          |
+| Address :    Улица пушкина дом колотушкина       |
+|                                                  |
+|              PIZZA: "Margarita"                  |
+|                                                  |
+|  Tomato sauce    Medium              2,30 x 1,0  |
+|  Hen             Less               15,00 x 0,5  |
+|  Onion           A lot               3,12 x 2,0  |
+|  Price per "Margarita"                  $21,04   |
+|                                                  |
+|                                                  |
+|              PIZZA: "Margarita"                  |
+|                                                  |
+|  Tomato sauce    Medium              2,30 x 1,0  |
+|  Hen             Less               15,00 x 0,5  |
+|  Onion           A lot               3,12 x 2,0  |
+|  Price per "Margarita"                  $21,04   |
+|                                                  |
+|                                                  |
+|              PIZZA: "Standard"                   |
+|                                                  |
+|  Pineapple       A lot               9,17 x 2,0  |
+|  Cucumber        More                1,10 x 1,5  |
+|  pepper          Medium          22222,30 x 1,0  |
+|  Price per "Standard"                 $22247,29  |
+|                                                  |
+|                                                  |
+|__________________________________________________|
+| Total price:                         $22 289,37  |
+|__________________________________________________|

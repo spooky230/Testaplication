@@ -1,4 +1,4 @@
-package pizza;
+package pizza.model;
 public class Client {
         private String name;
         private String address;

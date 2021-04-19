@@ -1,11 +1,11 @@
-package pizza;
+package pizza.model;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Pizza {
     private String name;
-    private Map<Component,Amount> components;
+    private Map<Component,Amount> componentsMap;
     private double basePrice = 5;
 
     public String getName() {
@@ -17,14 +17,14 @@ public class Pizza {
 
     public Pizza(String name) {
         this.name = name;
-        components = new HashMap<>();
+        componentsMap = new HashMap<>();
     }
 
     public double getBasePrice() {
         return basePrice;
     }
 
-    public Map<Component, Amount> getComponents() {
-        return components;
+    public Map<Component, Amount> getComponentsMap() {
+        return componentsMap;
     }
 }
