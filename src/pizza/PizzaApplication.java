@@ -48,5 +48,9 @@ public class PizzaApplication {
         System.out.println("delete this");
         System.out.println("delete this1");
         System.out.println("delete this2");
+
+        System.out.println("don't delete this");
+        System.out.println("don't delete this1");
+        System.out.println("don't delete this2");
     }
 }
