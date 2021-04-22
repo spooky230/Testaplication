@@ -45,5 +45,8 @@ public class PizzaApplication {
         order1.setPizza(standard);
         OrderService orderService = new OrderService();
         orderService.saveReport(order1);
+        System.out.println("delete this");
+        System.out.println("delete this1");
+        System.out.println("delete this2");
     }
 }
