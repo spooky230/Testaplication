@@ -44,6 +44,6 @@ public class PizzaApplication {
         order1.setDeliveredTime(delivered);
         order1.setPizza(standard);
         OrderService orderService = new OrderService();
-        System.out.println(orderService.prepareOrder(order1));
+        orderService.saveReport(order1);
     }
 }

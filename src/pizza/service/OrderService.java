@@ -5,7 +5,10 @@ import pizza.model.Amount;
 import pizza.model.Component;
 import pizza.model.Order;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 
 public class OrderService {
@@ -57,5 +60,25 @@ public class OrderService {
         report += String.format(TOTAL_PRICE,cash);
         report += MIDDLE_BORDER+ System.lineSeparator();
         return report;
+    }
+    public void printReport(String report){
+        System.out.println(report);
+    }
+    public void writeReport(String report, Date date){
+        String FILE = "report_" + REPORT_NAME_FORMAT.format(date) + ".txt";
+        try {
+            FileWriter writer =  new FileWriter(FILE);
+            writer.write(report);
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    public void saveReport(Order order){
+        String report = prepareOrder(order);
+        printReport(report);
+        writeReport(report,order.getOrderedTime());
+
     }
 }
