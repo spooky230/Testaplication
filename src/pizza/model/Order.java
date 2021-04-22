@@ -2,8 +2,11 @@ package pizza.model;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Order {
-    private Pizza pizza;
+    private Map<Pizza,Integer> pizzaMap;
     private Client client;
     private Date orderedTime;
     private Date deliveredTime;
@@ -11,6 +14,7 @@ public class Order {
     public Order(Client client){
         this.client = client;
         this.orderedTime = new Date();
+        this.pizzaMap = new HashMap<>();
     }
 
     public Client getClient() {
@@ -25,8 +29,21 @@ public class Order {
         return orderedTime;
     }
 
-    public Pizza getPizza() {
-        return pizza;
+    public Map<Pizza,Integer> getPizzaMap() {
+        return pizzaMap;
+    }
+    public void addPizza(Pizza pizza){
+        addPizza(pizza,1);
+    }
+    public void addPizza(Pizza pizza,int count){
+        if(pizzaMap.containsKey(pizza)){
+            Integer pizzaCount = pizzaMap.get(pizza);
+            pizzaCount += count;
+            pizzaMap.replace(pizza,pizzaCount);
+        }
+        else{
+            pizzaMap.put(pizza,count);
+        }
     }
 
     public void setDeliveredTime(Date deliveredTime) {
@@ -37,8 +54,8 @@ public class Order {
         this.orderedTime = orderedTime;
     }
 
-    public void setPizza(Pizza pizza) {
-        this.pizza = pizza;
+    public void setPizza(Map<Pizza,Integer> pizza) {
+        this.pizzaMap = pizza;
     }
     public void setOrderedTime(String time){
         try {

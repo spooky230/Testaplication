@@ -41,7 +41,7 @@ public class DefaultDataGenerator {
         calendar.add(Calendar.SECOND,48);
         delivered = calendar.getTime();
         order1.setDeliveredTime(delivered);
-        order1.setPizza(standard);
+        order1.addPizza(standard,5);
         return order1;
     }
 }
