@@ -52,4 +52,10 @@ public class CheckService {
             e.printStackTrace();
         }
     }
+    public void PrintProducts(Check check){
+       for(Item item1 : check.getItems().keySet()){
+           System.out.println("name: " + item1.getName());
+           System.out.println("price: " + item1.getPrice());
+       }
+    }
 }
