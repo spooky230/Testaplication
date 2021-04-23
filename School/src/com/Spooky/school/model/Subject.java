@@ -1,4 +1,4 @@
-package school.model;
+package com.Spooky.school.model;
 
 public class Subject {
     private String name;

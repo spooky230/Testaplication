@@ -1,4 +1,4 @@
-package school.model;
+package com.Spooky.school.model;
 
 import java.util.LinkedList;
 import java.util.List;
