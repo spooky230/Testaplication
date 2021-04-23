@@ -1,4 +1,4 @@
-package company.task7.model;
+package company.market.task7.model;
 
 import java.util.Date;
 import java.util.LinkedHashMap;

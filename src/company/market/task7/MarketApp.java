@@ -1,14 +1,14 @@
-package company.task7;
+package company.market.task7;
 
-import company.task7.model.Cashier;
-import company.task7.model.Check;
-import company.task7.model.Item;
-import company.task7.model.Market;
-import company.task7.service.CheckService;
+import company.market.task7.model.Cashier;
+import company.market.task7.model.Check;
+import company.market.task7.model.Item;
+import company.market.task7.model.Market;
+import company.market.task7.service.CheckService;
 
 import java.util.Date;
 
-public class Main {
+public class MarketApp {
     public static void main(String[] args) {
         Item item1 = new Item();
         item1.setName("Hat");

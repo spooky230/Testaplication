@@ -1,11 +1,10 @@
-package company.task7.service;
+package company.market.task7.service;
 
-import company.task7.model.Cashier;
-import company.task7.model.Check;
-import company.task7.model.Item;
-import company.task7.model.Market;
+import company.market.task7.model.Cashier;
+import company.market.task7.model.Check;
+import company.market.task7.model.Item;
+import company.market.task7.model.Market;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
